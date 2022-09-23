@@ -1,1 +1,1 @@
-web: gunicorn run:main --preload
+web:gunicorn --bind 0.0.0.0:$PORT flaskapp:app
