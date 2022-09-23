@@ -79,6 +79,7 @@ def add():
 
 
 @app.route('/done/<id>')
+@login_required
 def done(id):
     todo = Todo.query.filter_by(id=int(id)).first()
     todo.done = True
@@ -88,6 +89,7 @@ def done(id):
 
 
 @app.route("/update/<int:id>")
+@login_required
 def update(id):
     todo = Todo.query.filter_by(id=id).first()
     todo.done = not todo.done
@@ -95,6 +97,7 @@ def update(id):
     return redirect(url_for("home"))
 
 @app.route("/delete/<int:id>")
+@login_required
 def delete(id):
     todo = Todo.query.filter_by(id=id).first()
     db.session.delete(todo)
