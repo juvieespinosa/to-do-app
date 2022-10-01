@@ -47,7 +47,7 @@ class User(UserMixin, db.Model):
     password = db.Column(db.String(100))
 
     def __repr__(self):
-        return '<Register %r>' % self.name
+        return "<Register %r>" % self.name
 
 
 db.create_all()
