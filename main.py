@@ -70,7 +70,7 @@ def home():
 
 @app.route("/add", methods=["POST"])
 def add():
-    todo = Todo(text=request.form['todoitem'], done=False)
+    todo = Todo(text=request.form["todoitem"], done=False)
     db.session.add(todo)
     db.session.commit()
 
