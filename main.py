@@ -77,7 +77,7 @@ def add():
     return redirect(url_for("home"))
 
 
-@app.route('/done/<id>')
+@app.route("/done/<id>")
 def done(id):
     todo = Todo.query.filter_by(id=int(id)).first()
     todo.done = True
