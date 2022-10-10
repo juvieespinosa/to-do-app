@@ -152,7 +152,7 @@ def login():
     return render_template("login.html", form=form, current_user=current_user)
 
 
-@app.route('/logout')
+@app.route("/logout")
 def logout():
     logout_user()
     return redirect(url_for('cover'))
