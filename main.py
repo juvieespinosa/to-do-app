@@ -148,7 +148,7 @@ def login():
             return redirect(url_for('login'))
         else:
             login_user(user)
-            return redirect(url_for('home'))
+            return redirect(url_for("home"))
     return render_template("login.html", form=form, current_user=current_user)
 
 
