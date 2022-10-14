@@ -101,7 +101,7 @@ def delete(id):
     return redirect(url_for("home"))
 
 
-@app.route('/register', methods=["GET", "POST"])
+@app.route("/register", methods=["GET", "POST"])
 def register():
     form = RegistrationForm()
     if form.validate_on_submit():
