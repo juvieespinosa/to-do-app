@@ -110,7 +110,7 @@ def register():
             print(User.query.filter_by(email=form.email.data).first())
             #User already exists
             flash("You've already signed up with that email, log in instead!")
-            return redirect(url_for('login'))
+            return redirect(url_for("login"))
 
         hash_and_salted_password = generate_password_hash(
             form.password.data,
